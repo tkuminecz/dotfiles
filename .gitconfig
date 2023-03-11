@@ -1,0 +1,23 @@
+[init]
+  defaultBranch = main
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[alias]
+  b = branch
+  co = checkout
+  d = diff
+  f = fetch
+  l = log --graph --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %an ¬ %Cblue%cD%Creset'
+  m = merge
+  s = status -uall -s
+
+[user]
+  name = Tim Kuminecz
+  email = tkuminecz@gmail.com
+[pull]
+  rebase = false
+
