@@ -1,0 +1,40 @@
+[init]
+	defaultBranch = main
+
+[core]
+	editor = vim
+
+[user]
+	signingkey = 876A2DFB
+	name = Tim Kuminecz
+	email = tkuminecz@gmail.com
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+
+[diff]
+	algorithm = patience
+
+[gpg]
+	program = /usr/local/bin/gpg
+
+[commit]
+	gpgsign = true
+
+[alias]
+  b = branch
+  co = checkout
+  sb = !git b | fzf | cut -c 3- | xargs git co
+  d = diff
+  df = diff -b --stat
+  dw = diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
+  f = fetch
+  m = merge
+  l = log --graph --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %an ¬ %Cblue%cD%Creset'
+  s = status -uall -s
+  unmerged = !git l origin/develop..
+
+[pull]
+	rebase = false
